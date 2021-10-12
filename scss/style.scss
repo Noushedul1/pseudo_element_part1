@@ -1,0 +1,54 @@
+*{
+    background-color: #ddd;
+}
+// start part 1
+.pseudoElm{
+    height: 100px;
+    width: 100px;
+    outline: 1px solid black;
+    background: white;
+    position: relative;
+}
+.pseudoElm::before{
+    content: 'Before';
+    border: 1px solid green;
+    display: block;
+    position: absolute;
+    top: 100px;
+}
+.pseudoElm::after{
+    content: 'After';
+    border: 1px solid green;
+    display: block;
+}
+// end part 1
+
+// start part 2
+.pseudoElm2{
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+    outline: 1px solid black;
+    background: white;
+}
+.pseudoElm2::before{
+    content: 'Before';
+    border: 1px solid black;
+    display: block;
+    transform: translateY(40px);
+}
+.pseudoElm2::after{
+    content: 'After';
+    border: 1px solid black;
+    display: block;
+}
+// end part 2
+
+// start part 3
+.pseudoElm3 p::first-letter{
+    font-size: 25px;
+}
+.pseudoElm3::first-line{
+    color: green;
+}
+// end part 3

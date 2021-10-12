@@ -1,0 +1,56 @@
+* {
+  background-color: #ddd;
+}
+
+.pseudoElm {
+  height: 100px;
+  width: 100px;
+  outline: 1px solid black;
+  background: white;
+  position: relative;
+}
+
+.pseudoElm::before {
+  content: 'Before';
+  border: 1px solid green;
+  display: block;
+  position: absolute;
+  top: 100px;
+}
+
+.pseudoElm::after {
+  content: 'After';
+  border: 1px solid green;
+  display: block;
+}
+
+.pseudoElm2 {
+  margin-top: 50px;
+  height: 100px;
+  width: 100px;
+  outline: 1px solid black;
+  background: white;
+}
+
+.pseudoElm2::before {
+  content: 'Before';
+  border: 1px solid black;
+  display: block;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+.pseudoElm2::after {
+  content: 'After';
+  border: 1px solid black;
+  display: block;
+}
+
+.pseudoElm3 p::first-letter {
+  font-size: 25px;
+}
+
+.pseudoElm3::first-line {
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */
